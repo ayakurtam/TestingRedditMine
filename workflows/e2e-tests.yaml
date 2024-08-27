@@ -1,0 +1,19 @@
+name: End-to-End tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  end-to-end:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install
+        run: yarn install --frozen-lockfile
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      - name: e2e test
+        run: npx playwright test
