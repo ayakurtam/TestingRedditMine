@@ -19,6 +19,7 @@ test.describe("Reddit Testing", () => {
     //press on login button
     await page.getByRole('link', { name: 'Log In' }).click();
 
+    
     // enter ur name and pass
     await Login.login('locilo8756@daypey.com', 'test123456@')
     await expect(Login.login_button).toBeVisible()
