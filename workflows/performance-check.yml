@@ -2,7 +2,7 @@ name: Performance Check
 
 on:
   schedule:
-    - cron: '0 2 * * *' # Run daily at 2 AM UTC
+    - cron: '0 5 * * *' # Run daily at 2 AM UTC
   push:
     branches:
       - main
